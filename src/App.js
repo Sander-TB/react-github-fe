@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./sass/App.css";
 import Heading from "./components/Heading";
 import ProfilePhoto from "./components/ProfilePhoto";
 import RepoList from "./components/RepoList";
