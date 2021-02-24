@@ -1,10 +1,13 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.scss";
 
 export default function Navigation() {
 	return (
 		<nav className={styles.appNavigation}>
-			<a href='/'>Home</a>
-			<a href='/'>About</a>
+			<NavLink exact to='/'>
+				Home
+			</NavLink>
+			<NavLink to='/about'>About</NavLink>
 		</nav>
 	);
 }
