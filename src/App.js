@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import "./sass/App.css";
+import "./sass/App.scss";
+import Navigation from "./components/Navigation/Navigation";
 import Heading from "./components/Heading";
 import ProfilePhoto from "./components/ProfilePhoto";
 import RepoList from "./components/RepoList";
@@ -23,9 +24,12 @@ function App({ username }) {
 						avatarUrl={myGithubData.avatar_url}
 						avatarAlt={myGithubData.name}
 					/>
-					<Heading name={myGithubData.name} />
-					<RepoList username={username} />
+					<Heading name={myGithubData.name} size='3' color='gray' />
 				</header>
+				<Navigation />
+				<main>
+					<RepoList username={username} />
+				</main>
 			</div>
 		);
 	}
